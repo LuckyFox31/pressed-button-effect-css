@@ -1,0 +1,78 @@
+main {
+	article {
+		width: 60%;
+		height: 60%;
+
+		background-color: $white;
+		border-radius: 15px;
+
+		padding: 1.5rem;
+
+		box-shadow: 0px 7px 0px 0px $border-article-color;
+
+		overflow: hidden;
+
+		header {
+			p {
+				font-weight: $bold;
+				font-size: 1.35rem;
+				margin-bottom: 0.5rem;
+				letter-spacing: 0.1rem;
+				color: $green;
+			}
+
+			h2 span {
+				color: $blue;
+			}
+		}
+
+		section {
+			display: flex;
+			margin-top: 2rem;
+
+			.left {
+				width: 55%;
+
+				p {
+					margin-bottom: 4rem;
+				}
+
+				a {
+					display: inline-block;
+					background-color: $yellow;
+					padding: 0.5rem 2.5rem;
+					font-size: $p-size;
+					border-radius: 15px;
+					box-shadow: 0px 5px 0px 0px darken($yellow, 20);
+					transition: box-shadow 0.2s, transform 0.2s, background 0.1s;
+					span {
+						margin-left: 7px;
+					}
+
+					&:hover {
+						transform: translateY(5px);
+						box-shadow: 0px 0px 0px 0px darken($yellow, 20);
+					}
+
+					&:active {
+						background-color: darken($yellow, 10);
+					}
+				}
+			}
+
+			.right {
+				position: relative;
+				width: 45%;
+				height: 100%;
+
+				img {
+					position: absolute;
+					width: 100%;
+
+					transform: translate(65px, 15px) rotate(-5deg);
+					opacity: 0.9;
+				}
+			}
+		}
+	}
+}
